@@ -3,7 +3,7 @@ import { Message } from "../utils/Message";
 import { api } from "../api";
 import { ERROR, SUCCESS, WARNING } from "../utils/variant";
 
-const Modal = ({ id = "modal", onClose = () => {}, children }) => {
+const Modal = ({ id = "modal", onClose = () => { }, children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
@@ -82,7 +82,7 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
             />
           </div>
           <button className="button mb-3 modal-button" type="submit" disabled={!active}>
-            Increver
+            Inscrever
           </button>
         </form>
       </div>

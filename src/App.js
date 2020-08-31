@@ -21,7 +21,7 @@ function App() {
             className="button mb-5"
             onClick={() => setIsModalVisible(true)}
           >
-            INCREVA-SE AGORA NA SEMANA FLEXÍVEL
+            INSCREVA-SE AGORA NA SEMANA FLEXÍVEL
           </button>
         </section>
       </div>

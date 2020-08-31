@@ -20,7 +20,7 @@ const Cards = ({ titulo, texto }) => {
             <p className="card-text">
               Durante a semana será entregue um video por dia
               onde eu falo sobre temas relacionados a dieta
-              flexíel.
+              flexível.
             </p>
           </div>
         </div>
