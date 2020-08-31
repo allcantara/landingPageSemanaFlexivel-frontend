@@ -408,6 +408,14 @@ form textarea {
       display: flex;
       justify-content: center;
       margin: auto;
+      transition: background-color 0.4s;
+    }
+
+    .modal-button:disabled {
+      background-color: #727272;
+      color: #fff;
+      border: none;
+      cursor: not-allowed;
     }
     .close {
       background-color: transparent;

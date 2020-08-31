@@ -7,6 +7,7 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
+  const [active, setActive] = useState(true)
 
   const message = new Message();
 
@@ -17,6 +18,7 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
   const handleSave = async (event) => {
     event.preventDefault();
     try {
+      setActive(false)
       const { status } = await api.post("/users", {
         name,
         email,
@@ -25,6 +27,7 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
 
       if (status === 203) {
         message.showMessage("Este e-mail já foi cadastrado!", WARNING);
+        setActive(true)
         return;
       }
 
@@ -38,6 +41,8 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
     } catch (error) {
       message.showMessage("Falha ao cadastrar! Tente novamente.", ERROR);
     }
+
+    setActive(true)
   };
 
   return (
@@ -76,7 +81,7 @@ const Modal = ({ id = "modal", onClose = () => {}, children }) => {
               required
             />
           </div>
-          <button className="button mb-3 modal-button" type="submit">
+          <button className="button mb-3 modal-button" type="submit" disabled={!active}>
             Increver
           </button>
         </form>
