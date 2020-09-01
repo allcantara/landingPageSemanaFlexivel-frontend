@@ -63,7 +63,7 @@ function App() {
 
       <div className="row footer">
         <button className="button mb-3" onClick={() => setIsModalVisible(true)}>
-          INCREVA-SE AGORA NA SEMANA FLEXÍVEL
+          INSCREVA-SE AGORA NA SEMANA FLEXÍVEL
         </button>
         <span>Todos os direitos reservados.</span>
       </div>
