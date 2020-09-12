@@ -64,7 +64,9 @@ function App() {
         <div className="col"></div>
       </div>
 
-      <div className="row p-md-4"></div>
+      <div className="row p-md-4">
+        
+      </div>
     </div>
   );
 }
