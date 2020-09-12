@@ -7,10 +7,81 @@
   box-sizing: border-box;
 }
 
-.lala{
+.corpo{
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;  
 }
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252525;
+}
+
+.title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 30px;
+}
+.video {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  width: 90%;
+  max-width: 800px;
+  height: 60px;
+  background: #fcbf1e;
+  border: 0;
+  border-radius: 8px;
+  color: #252525;
+  font-weight: 600;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  transition: all 0.1s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container-ebook {
+  color: rgb(0, 69, 119);
+  margin: 0 20px;
+}
+.title-container-ebook {
+  font-size: 40px;
+}
+.text-container-ebook {
+  max-width: 80%;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+}
+.card-container {
+  color: rgb(0, 69, 119);
+  background-color: sandybrown;
+  display: flex;
+  height: 100%;
+}
+
+.container-card{
+  margin: auto;
+}
+
+.card-deck{
+  margin: auto;
+  justify-content: center;
+}
+
 
 body {
   font: "Montserrat", sans-serif;
@@ -26,10 +97,6 @@ input,
 button,
 textarea {
   font: 400 18px "Montserrat", sans-serif;
-}
-
-button {
-  cursor: pointer;
 }
 
 form input {
@@ -52,24 +119,9 @@ form textarea {
   line-height: 24px;
 }
 
-.button {
-  width: 100%;
-  max-width: 700px;
-  height: 60px;
-  background: #fcbf1e;
-  border: 0;
-  border-radius: 8px;
-  color: #252525;
-  font-weight: 600;
-  margin-top: 16px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  transition: all 0.1s;
-  text-decoration: none;
-}
+
+
+
 
 @media (max-width: 280px) {
   .button {
@@ -122,29 +174,9 @@ form textarea {
 
 // Verificar
 
-.img-container {
-  width: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #252525;
-}
-
 .content {
   padding: 20px;
   text-align: left;
-}
-
-.title {
-  font-weight: 800;
 }
 
 .title-1 {
@@ -216,22 +248,13 @@ form textarea {
   color: #fcbf1e;      
 }
 
-.card-container {
-  color: rgb(0, 69, 119);
-  margin: 0 20px;
-}
-
-.title-card {
-  font-size: 40px;
-}
-
 .divCard {
   display: flex;
   justify-content: center;
   flex-direction: column;
   border-radius: 6px;
   padding: 20px;
-  max-width: 518px;
+  max-width: 330px;
   box-shadow: 3px 11px 22px 0px rgba(50, 50, 50, 0.38);
   -webkit-box-shadow: 3px 11px 22px 0px rgba(50, 50, 50, 0.38);
   -moz-box-shadow: 3px 11px 22px 0px rgba(50, 50, 50, 0.38);
@@ -302,8 +325,7 @@ form textarea {
 
 .expert {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 
 .expert-content p {
@@ -378,89 +400,6 @@ form textarea {
   .footer span {
     font-size: 14px;
     margin-bottom: 10px;
-  }
-}
-
-.modal {
-  width: 100%;
-  overflow: hidden !important;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .modal-container {
-    background-color: #fff;
-    color: #000;
-    width: 90%;
-    height: 70%;
-    max-width: 600px;
-    max-height: 320px;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    .modal-form{
-      margin: 40px;
-      margin-bottom: 20px;
-    }
-    .modal-button{
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: auto;
-      transition: background-color 0.4s;
-    }
-
-    .modal-button:disabled {
-      background-color: #727272;
-      color: #fff;
-      border: none;
-      cursor: not-allowed;
-    }
-    .close {
-      background-color: transparent;
-      border: none;
-      outline: none;
-      width: 32px;
-      height: 32px;
-      right: calc(-100% + 64px);
-      top: 16px;
-      margin-right: 35px;
-      margin-bottom: 22px;
-      cursor: pointer;
-      &:before,
-      &:after {
-        content: " ";
-        position: absolute;
-        width: 2.5px;
-        height: 24px;
-        background-color: #000;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
-    .content {
-      .div {
-        // background-color: #000;
-      }
-    }
-  }
-}
-@media (max-width: 730px) {
-  .modal-container {
-    width: 80% !important;
-    height: 80% !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .modal-container {
-    width: 90% !important;
-    height: 80% !important;
   }
 }
 
